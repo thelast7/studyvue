@@ -20,6 +20,43 @@
         <input type="text" v-model="kilometer">
     </div><br>
 
+    <div id="app2">
+        <p>input 1 baris</p>
+        <input type="text" v-model="message"> <p>hasil : {{ message }}</p>
+        <p>input banyak baris</p>
+        <textarea cols="30" rows="10" v-model="message2">
+        </textarea>
+        <p style="white-space: pre-line;">hasil : {{ message2 }}</p><br>
+
+        <p>radio v-model</p>
+        <input type="radio" v-model="testRadio" value="motor">motor <br>
+        <input type="radio" v-model="testRadio" value="mobil">mobil <br>
+        <p>hasil : {{ testRadio }}</p><br>
+
+        <p>checkbox v-model</p>
+        <input type="checkbox" v-model="testCheckbox" value="ayam">ayam <br>
+        <input type="checkbox" v-model="testCheckbox" value="kambing">kambing <br>
+        <input type="checkbox" v-model="testCheckbox" value="sapi">sapi <br>
+        <p>hasil : {{ testCheckbox }}</p><br>
+        <ul>
+            <li v-for="test in testCheckbox">
+                {{ test }}
+            </li>
+        </ul>
+
+        <p>dropdown v-model</p>
+        <select v-model="testDropdown" multiple>
+            <option value="" disabled>pilih</option>
+            <option value="php">php</option>
+            <option value="javascript">javascript</option>
+            <option value="python">python</option>
+        </select>
+        <p>pilihan bahasa : {{ testDropdown }}</p>
+        <ul>
+            <li v-for="dropdown in testDropdown">{{ dropdown }}</li>
+        </ul>
+    </div>
+
     <script src="assets/vendor/vue.js"></script>
     <script src="assets/js/app.js"></script>
 </body>

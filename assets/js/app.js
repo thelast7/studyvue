@@ -31,3 +31,14 @@ var app = new Vue ({
         }
     }
 })
+
+var app = new Vue ({
+    el: '#app2',
+    data: {
+        message: '',
+        message2: '',
+        testRadio: '',
+        testCheckbox: [],
+        testDropdown: []
+    }
+})
