@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-if="show">{{ message }}</p>
+        <p v-else="show">{{ message2 }}</p>
+        <p>penjumlahan {{ int1 }} + {{ int2 }} = {{ penjumlahan }}</p>
+        <p>pengurangan {{ int2 }} diambil {{ int1 }} adalah {{ hasil }}</p>
+        <button v-on:click="prosesPengurangan">hasil</button><br>
+        <h3>converter</h3>
+        <p>meter</p>
+        <input type="text" v-model="meter">
+        <p>kilometer</p>
+        <input type="text" v-model="kilometer">
+    </div><br>
+
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
